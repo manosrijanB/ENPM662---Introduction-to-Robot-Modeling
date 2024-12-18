@@ -1,15 +1,51 @@
-ENPM662 -> Project2
 
-Files: 
+FANUC Manipulator Simulation
 
- 
-to run : roslaunch fanuc_sim teleop_manipulator.launch to run teleop for manipulator
-to run : pub.py for publisher
-to run : full_fanuc_sim.launch for the main launch files
+Overview
+This project simulates the FANUC manipulator performing pick-and-place tasks using ROS (Robot Operating System) in Gazebo and RVIZ environments. The project includes modeling, kinematics (both forward and inverse), and control for the FANUC manipulator.
 
-to run : python3 invk.py for inverse kinematics and trajectory generation
-to run : python3 fwk.py for forward kinematics 
+ Files
 
+ To Run:
+- Teleoperation Launch:  
+  To launch the teleoperation for the manipulator, run:  
+  ```bash
+  roslaunch fanuc_sim teleop_manipulator.launch
+  ```
 
-CAD Files :
-Consists of all the important assembly files along with part files of the manipulator 
+- Publisher Script:  
+  To run the publisher for communication, execute:  
+  ```bash
+  python3 pub.py
+  ```
+
+- Main Launch Files:  
+  To start the full FANUC simulation, use:  
+  ```bash
+  roslaunch fanuc_sim full_fanuc_sim.launch
+  ```
+
+- Inverse Kinematics:  
+  To compute the inverse kinematics and generate trajectories, run:  
+  ```bash
+  python3 invk.py
+  ```
+
+- Forward Kinematics:  
+  To compute forward kinematics, execute:  
+  ```bash
+  python3 fwk.py
+  ```
+
+CAD Files:
+The project includes CAD files that consist of the important assembly files and part files for the FANUC manipulator.
+
+Requirements:
+- ROS (Robot Operating System)
+- Gazebo
+- RVIZ
+- Python 3
+- Required ROS packages for FANUC manipulator simulation
+
+ Conclusion:
+This simulation provides insights into the FANUC manipulator's functionality and its applications in industrial automation tasks, including pick-and-place operations. Future work will involve improvements in controller interactions and task execution.
